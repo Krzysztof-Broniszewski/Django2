@@ -12,6 +12,14 @@
 
     <h1>Kontakt: 123 456 789</h1>
 
+    <p>{{ users }},{{ phone_number }},{{ numbers }}</p>
+
+    <ul>
+    {% for nr in numbers %}
+        <li> {{ forloop.counter }} -> {{ nr }} </li>
+    {% endfor %}
+    </ul>
+
     {% endblock %}
     
 </body>
