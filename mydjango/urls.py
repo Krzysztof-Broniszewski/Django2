@@ -18,9 +18,13 @@ from django.urls import path
 
 from strony.views import home_view, kontakt, o_nas
 
+from Produkty.views import create_form_view, opis_widok
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('kontakt', kontakt, name='kontakt'),
+    path('formularz', create_form_view, name='formularz'),
+    path('opis', opis_widok, name='opis'),
     path('o_nas', o_nas, name='o Nas'),
 ]
