@@ -18,7 +18,7 @@ def create_form_view(request):
     return render (request, "products/create_product.html", kontekst)
 
 def opis_widok(request):
-    obj = Produkt.objects.get(id=5)
+    obj = Produkt.objects.get(id=2)
 
     kontekst = {
         'object' : obj

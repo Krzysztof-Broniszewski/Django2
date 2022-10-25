@@ -11,3 +11,7 @@ class Produkt(models.Model):
     drzwi = models.DecimalField(blank=True, null=True, max_digits=1, decimal_places=0)
     cena = models.DecimalField(max_digits=1000000, decimal_places=2)
 
+    def __str__(self):
+        return self.opis
+
+

@@ -1,4 +1,4 @@
-"""mydjango URL Configuration
+"""login_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -16,19 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from strony.views import home_view, kontakt, o_nas
-
-from Produkty.views import create_form_view, opis_widok
-
-from cars.views import cars_list
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view, name='home'),
-    path('kontakt', kontakt, name='kontakt'),
-    path('formularz', create_form_view, name='formularz'),
-    path('opis', opis_widok, name='opis'),
-    path('o_nas', o_nas, name='o Nas'),
-    path('cars_list', cars_list, name='cars_list'),
     path('accounts/', include('django.contrib.auth.urls')),
+
 ]

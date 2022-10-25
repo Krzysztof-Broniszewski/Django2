@@ -1,0 +1,22 @@
+{% extends 'baza.html' %}
+
+{% block content %}
+
+<h1>Lista samochodów</h1>
+
+{% for car in cars %}
+
+<p>----------------------------------</p>
+<p>{{ car.car }}</p>
+<p>{{ car.model }}</p>
+<p>{{ car.description }}</p>
+<p>{{ car.engine }}</p>
+<p>{{ car.gear_box }}</p>
+<p>{{ car.colour }}</p>
+<p>{{ car.priece }}</p>
+
+
+{% endfor %}
+
+{% endblock %}
+
